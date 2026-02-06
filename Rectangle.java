@@ -7,7 +7,7 @@ public class Rectangle {
   public double originX = 0.0;
   public double originY = 0.0;
 
-  // 1 static attributes
+  // 1 static attribute s
   public static final int NUMBER_OF_SIDES = 4;
 
   // main constructor
