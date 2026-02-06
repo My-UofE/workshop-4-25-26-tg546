@@ -44,4 +44,41 @@ public class Rectangle {
     return 2 * (width + height);
   }
   
+
+  public void scale(double scaleX, double scaleY){
+    this.width = width * scaleX;
+    this.height = height* scaleY;
+  }
+    public void scale(double scale){
+    this.width = width * scale;
+    this.height = height* scale;
+  }
+
+  public boolean isOverlappedWith(Rectangle r){
+
+    if (r.originX < originX){
+    if ((r.originX + r.width) > (originX - width)){
+      return true;
+    }
+    }
+    else{
+          if ((r.originX + r.width) < (originX - width)){
+      return true;
+    }
+    }
+
+
+    if (r.originY < originY){
+      if ((r.originY + r.height) > (originY-height)){
+        return true;
+      }
+    }
+    else {
+      if ((r.originY + r.height) > (originY-height)){
+        return true;
+      }
+    }
+
+    return false;
+  }
 }
