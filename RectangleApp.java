@@ -31,12 +31,12 @@ public class RectangleApp {
 		 */
 
 
-		/*
+		
 		System.out.println("Creating myRect3");
 		Rectangle myRect3 = new Rectangle(); 
 		System.out.println("Width: "+myRect3.width+", Height: "+myRect3.height);
 		System.out.println("Origin: "+myRect3.originX+","+myRect3.originY);
-		 */
+		 
 
 	}
 }
