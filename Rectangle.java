@@ -2,13 +2,38 @@
 public class Rectangle {
   
   // 4 instance attributes
-  public double width;
-  public double height;
+  private double width;
+  private double height;
   public double originX = 0.0;
   public double originY = 0.0;
 
   // 1 static attribute s
   public static final int NUMBER_OF_SIDES = 4;
+
+  // for each attribute provide getter method
+  public double getWidth(){ 
+    return width;
+  }
+
+  // for each attribute provide setter method
+  public void setWidth(double width){
+    if (width >= 0){
+      this.width = width;
+    }
+  }
+
+
+  // for each attribute provide getter method
+  public double getHeight(){ 
+    return height;
+  }
+
+  // for each attribute provide setter method
+  public void setHeight(double height){
+    if (height >= 0){
+      this.height = height;
+    }
+  }
 
   // main constructor
   public Rectangle(double width, double height, double oX, double oY) {
