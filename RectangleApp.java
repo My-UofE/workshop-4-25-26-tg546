@@ -53,6 +53,7 @@ public class RectangleApp {
 		Rectangle myRect5 = new Rectangle(50.0, 20.0, 0, 0); 
 		Rectangle myRect6 = new Rectangle(20.0, 40.0, 500, 500); 
 
+
 		// myRect4 overlaps myRect5 so these should show as true
 		System.out.println( "myRect4 overlaps myRect5: " + myRect4.isOverlappedWith(myRect5) ) ; 
 		System.out.println( "myRect5 overlaps myRect4: " + myRect5.isOverlappedWith(myRect4) ) ;
@@ -61,5 +62,8 @@ public class RectangleApp {
 		System.out.println( "myRect4 overlaps myRect6: " + myRect4.isOverlappedWith(myRect6) ) ;
 		System.out.println( "myRect6 overlaps myRect4: " + myRect6.isOverlappedWith(myRect4) ) ;
 
+
+		boolean result = Rectangle.areOverlapping(myRect4, myRect5);
+		System.out.println( "myRect4 overlaps myRect5: "+result);
 	}
 }

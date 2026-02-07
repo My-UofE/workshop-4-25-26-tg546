@@ -55,30 +55,45 @@ public class Rectangle {
   }
 
   public boolean isOverlappedWith(Rectangle r){
-
-    if (r.originX < originX){
-    if ((r.originX + r.width) > (originX - width)){
-      return true;
-    }
+    if (r.originY < this.originY){
+      if (r.originY + r.height > this.originY - this.height){
+        return true;
+      }
     }
     else{
-          if ((r.originX + r.width) < (originX - width)){
-      return true;
-    }
-    }
-
-
-    if (r.originY < originY){
-      if ((r.originY + r.height) > (originY-height)){
-        return true;
-      }
-    }
-    else {
-      if ((r.originY + r.height) > (originY-height)){
+      if (this.originY + this.height > r.originY - r.height){
         return true;
       }
     }
 
+    if (r.originX < this.originX){
+      if (r.originX + r.width > this.originX - this.width){
+        return true;
+      }
+    }
+    else{
+      if (this.originX + this.width > r.originX - r.width){
+        return true;
+      }
+    }
     return false;
+  }
+
+  public static boolean areOverlapping(Rectangle r1, Rectangle r2){
+    return r1.isOverlappedWith(r2);
+  }
+  
+
+  public double calcRatio(){
+    return this.width / this.height;
+  }
+
+  public boolean isSquare(){
+    if (calcRatio() < 1.001 && calcRatio() > 0.999){
+    return true;
+    }
+    else{
+      return false;
+    }
   }
 }
